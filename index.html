@@ -3,16 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ATX Construction &amp; Maintenance Inc. | Plumbing, Electrical &amp; General Contracting in Greater LA</title>
-  <meta name="description" content="ATX Construction & Maintenance Inc. — licensed plumbing, electrical, general contracting, and home repairs serving the Greater Los Angeles area and Lancaster. Licensed & insured. Call for a free estimate.">
+  <title>ATX Construction &amp; Maintenance Inc. | Los Angeles Plumbing, Electrical &amp; General Contracting</title>
+  <meta name="description" content="ATX Construction & Maintenance Inc. provides plumbing, electrical, general contracting, and home repairs across Los Angeles. Service and quality first. Call for a free estimate.">
   <style>
     :root {
-      --navy: #1a2a3a;
-      --steel: #2c3e50;
-      --orange: #e8731c;
-      --orange-dark: #c95f10;
-      --light: #f4f5f7;
-      --gray: #5a6470;
+      --navy: #121212;        /* near-black base */
+      --steel: #1e1e1e;       /* dark charcoal */
+      --orange: #c8102e;      /* sleek red */
+      --orange-dark: #9e0c24; /* deep red */
+      --gold: #d4af37;        /* gold accent */
+      --gold-dark: #b8962e;
+      --light: #f6f4ef;       /* warm off-white */
+      --gray: #5a5a5a;
       --white: #ffffff;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -28,14 +30,16 @@
       font-size: 0.9rem;
       text-align: center;
       padding: 8px 16px;
+      border-bottom: 1px solid var(--gold);
     }
-    .topbar a { color: var(--orange); text-decoration: none; font-weight: bold; }
+    .topbar a { color: var(--gold); text-decoration: none; font-weight: bold; }
     header {
       background: var(--white);
       position: sticky;
       top: 0;
       z-index: 100;
       box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      border-bottom: 3px solid var(--gold);
     }
     .nav-inner {
       max-width: 1100px;
@@ -47,6 +51,7 @@
       flex-wrap: wrap;
     }
     .logo { font-size: 1.4rem; font-weight: 800; color: var(--navy); letter-spacing: 0.5px; }
+    .logo a { text-decoration: none; color: var(--navy); }
     .logo span { color: var(--orange); }
     nav a {
       color: var(--steel);
@@ -57,22 +62,25 @@
     }
     nav a:hover { color: var(--orange); }
     .hero {
-      background: linear-gradient(rgba(26,42,58,0.82), rgba(26,42,58,0.82)),
+      background: linear-gradient(rgba(10,10,10,0.86), rgba(10,10,10,0.86)),
         url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80");
       background-size: cover;
       background-position: center;
       color: var(--white);
       text-align: center;
       padding: 110px 24px;
+      border-bottom: 3px solid var(--gold);
     }
-    .hero h1 { font-size: 2.8rem; margin-bottom: 16px; line-height: 1.2; }
+    .hero h1 { font-size: 2.8rem; margin-bottom: 10px; line-height: 1.2; }
+    .hero .motto { font-size: 1.35rem; color: var(--gold); font-weight: 700; letter-spacing: 1px; margin-bottom: 16px; }
     .hero p { font-size: 1.25rem; max-width: 680px; margin: 0 auto 28px; color: #e3e8ed; }
     .btn {
       display: inline-block;
       background: var(--orange);
-      color: var(--white);
+      color: #ffffff !important;
       padding: 14px 34px;
       border-radius: 4px;
+      border: 2px solid var(--gold);
       text-decoration: none;
       font-weight: 700;
       font-size: 1.05rem;
@@ -81,7 +89,7 @@
     .btn:hover { background: var(--orange-dark); }
     .btn-outline {
       background: transparent;
-      border: 2px solid var(--white);
+      border: 2px solid var(--gold);
       margin-left: 12px;
     }
     .btn-outline:hover { background: var(--white); color: var(--navy); }
@@ -89,7 +97,7 @@
     .container { max-width: 1100px; margin: 0 auto; }
     .section-title { text-align: center; margin-bottom: 50px; }
     .section-title h2 { font-size: 2.1rem; color: var(--navy); }
-    .section-title .bar { width: 60px; height: 4px; background: var(--orange); margin: 14px auto 0; }
+    .section-title .bar { width: 60px; height: 4px; background: var(--gold); margin: 14px auto 0; }
     .services { background: var(--light); }
     .grid {
       display: grid;
@@ -101,7 +109,7 @@
       border-radius: 8px;
       padding: 30px 26px;
       box-shadow: 0 3px 12px rgba(0,0,0,0.07);
-      border-top: 4px solid var(--orange);
+      border-top: 4px solid var(--gold);
       transition: transform 0.2s;
     }
     .card:hover { transform: translateY(-5px); }
@@ -114,47 +122,9 @@
       gap: 30px;
       text-align: center;
     }
-    .why-item .num { font-size: 2.6rem; font-weight: 800; color: var(--orange); }
+    .why-item .num { font-size: 2.6rem; font-weight: 800; color: var(--gold); }
     .why-item h3 { color: var(--navy); margin: 8px 0; }
     .why-item p { color: var(--gray); }
-    .cta-band {
-      background: var(--orange);
-      color: var(--white);
-      text-align: center;
-      padding: 50px 24px;
-    }
-    .cta-band h2 { font-size: 2rem; margin-bottom: 10px; }
-    .cta-band p { font-size: 1.2rem; margin-bottom: 22px; }
-    .cta-band .btn { background: var(--navy); }
-    .cta-band .btn:hover { background: var(--steel); }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 40px;
-    }
-    .contact-info h3 { color: var(--navy); margin-bottom: 6px; }
-    .contact-info p { color: var(--gray); margin-bottom: 20px; }
-    .contact-info a { color: var(--orange); text-decoration: none; font-weight: 600; }
-    .form input, .form textarea {
-      width: 100%;
-      padding: 12px 14px;
-      margin-bottom: 14px;
-      border: 1px solid #ccd2d9;
-      border-radius: 4px;
-      font-family: inherit;
-      font-size: 1rem;
-    }
-    .form button {
-      background: var(--orange);
-      color: var(--white);
-      border: none;
-      padding: 14px 30px;
-      border-radius: 4px;
-      font-weight: 700;
-      font-size: 1.05rem;
-      cursor: pointer;
-    }
-    .form button:hover { background: var(--orange-dark); }
     .reviews { background: var(--white); }
     .review-grid {
       display: grid;
@@ -165,31 +135,42 @@
       background: var(--light);
       border-radius: 8px;
       padding: 28px 26px;
-      border-left: 4px solid var(--orange);
+      border-left: 4px solid var(--gold);
     }
-    .review .stars { color: #f5a623; font-size: 1.1rem; margin-bottom: 10px; letter-spacing: 2px; }
+    .review .stars { color: var(--gold); font-size: 1.1rem; margin-bottom: 10px; letter-spacing: 2px; }
     .review p { font-style: italic; color: var(--steel); margin-bottom: 14px; }
     .review .name { font-weight: 700; color: var(--navy); font-style: normal; }
     .review .meta { font-size: 0.88rem; color: var(--gray); font-style: normal; }
-    .reviews .yelp-link { text-align: center; margin-top: 36px; }
-    .form-note { font-size: 0.85rem; color: var(--gray); margin-top: -6px; margin-bottom: 14px; }
-    .license-strip {
-      background: var(--light);
+    .review-empty {
+      grid-column: 1 / -1;
       text-align: center;
-      padding: 18px 24px;
-      color: var(--steel);
-      font-weight: 600;
-      border-top: 1px solid #e3e7eb;
+      border-left: none;
+      border-top: 4px solid var(--gold);
     }
-    .license-strip span { color: var(--orange); }
+    .review-empty p { font-style: normal; color: var(--gray); margin-bottom: 0; }
+    .reviews .yelp-link { text-align: center; margin-top: 36px; }
+    .cta-band {
+      background: var(--orange);
+      color: var(--white);
+      text-align: center;
+      padding: 50px 24px;
+      border-top: 3px solid var(--gold);
+      border-bottom: 3px solid var(--gold);
+    }
+    .cta-band h2 { font-size: 2rem; margin-bottom: 10px; }
+    .cta-band p { font-size: 1.2rem; margin-bottom: 22px; }
+    .cta-band .btn { background: var(--navy); }
+    .cta-band .btn:hover { background: var(--steel); }
     footer {
       background: var(--navy);
       color: #aeb8c2;
       text-align: center;
       padding: 30px 24px;
+      border-top: 3px solid var(--gold);
     }
     footer .logo { color: var(--white); margin-bottom: 8px; font-size: 1.2rem; }
-    footer a { color: var(--orange); text-decoration: none; }
+    footer a { color: var(--gold); text-decoration: none; }
+    footer .fineprint { font-size: 0.8rem; color: #7e8a96; margin-top: 12px; }
     @media (max-width: 600px) {
       .hero h1 { font-size: 2rem; }
       .btn-outline { margin-left: 0; margin-top: 12px; }
@@ -201,64 +182,55 @@
 <body>
 
   <div class="topbar">
-    Licensed &amp; Insured · CSLB Lic. #1122013 · Serving Greater Los Angeles &amp; Lancaster · <a href="tel:3234220016">Call (323) 422-0016</a>
+    Serving Los Angeles · <a href="tel:3234220016">Call (323) 422-0016</a>
   </div>
 
   <header>
     <div class="nav-inner">
-      <div class="logo">ATX <span>Construction &amp; Maintenance</span></div>
+      <div class="logo"><a href="index.html">ATX <span>Construction &amp; Maintenance</span></a></div>
       <nav>
-        <a href="#services">Services</a>
-        <a href="#why">Why Us</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#why">Why Us</a>
+        <a href="index.html#reviews">Reviews</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
   <section class="hero">
-    <h1>Built Right. Done Right.</h1>
-    <p>Plumbing, electrical, general contracting, and home repairs you can count on — serving the Greater Los Angeles area and all communities near Lancaster. Quality workmanship from a team that shows up.</p>
-    <a href="#contact" class="btn">Get a Free Estimate</a>
+    <h1>ATX Construction &amp; Maintenance Inc.</h1>
+    <div class="motto">Service and Quality First</div>
+    <p>We handle plumbing, electrical, general contracting, and home repairs across Los Angeles. Call us and we will get the job done right.</p>
+    <a href="contact.html" class="btn">Get a Free Estimate</a>
     <a href="tel:3234220016" class="btn btn-outline">Call Now</a>
   </section>
 
   <section class="services" id="services">
     <div class="container">
       <div class="section-title">
-        <h2>Our Services</h2>
+        <h2>What We Do</h2>
         <div class="bar"></div>
       </div>
       <div class="grid">
         <div class="card">
           <div class="icon">🔧</div>
           <h3>Plumbing</h3>
-          <p>Repairs, installations, leak detection, water heaters, and drain cleaning — handled by experienced pros.</p>
+          <p>We fix leaks, install fixtures, and take care of the plumbing problems around your home.</p>
         </div>
         <div class="card">
           <div class="icon">⚡</div>
           <h3>Electrical</h3>
-          <p>Wiring, panel upgrades, lighting, outlets, and troubleshooting. Safe, code-compliant work every time.</p>
+          <p>We handle wiring, lighting, outlets, and other electrical work, done safely and to code.</p>
         </div>
         <div class="card">
           <div class="icon">🏠</div>
           <h3>General Contracting</h3>
-          <p>Remodels, additions, and project management from start to finish, coordinated under one roof.</p>
+          <p>We take on remodels, repairs, and bigger projects and manage the work from start to finish.</p>
         </div>
         <div class="card">
           <div class="icon">🛠️</div>
-          <h3>Home Repairs &amp; Maintenance</h3>
-          <p>Drywall, carpentry, fixtures, and the ongoing upkeep your home needs — no job too small.</p>
-        </div>
-        <div class="card">
-          <div class="icon">🚿</div>
-          <h3>Bath &amp; Kitchen</h3>
-          <p>Full and partial renovations that combine our plumbing, electrical, and finishing expertise.</p>
-        </div>
-        <div class="card">
-          <div class="icon">📋</div>
           <h3>And More</h3>
-          <p>Got a project not listed here? Reach out — chances are good we can help or point you the right way.</p>
+          <p>Have a job that is not listed here? Give us a call. There is a good chance we can help.</p>
         </div>
       </div>
     </div>
@@ -267,37 +239,32 @@
   <section id="why">
     <div class="container">
       <div class="section-title">
-        <h2>Why Choose ATX Construction &amp; Maintenance</h2>
+        <h2>Why Work With Us</h2>
         <div class="bar"></div>
       </div>
       <div class="why-grid">
         <div class="why-item">
           <div class="num">✓</div>
-          <h3>Licensed &amp; Insured</h3>
-          <p>CSLB Licensed (#1122013) for your protection and peace of mind.</p>
+          <h3>Licensed and Insured</h3>
+          <p>You are covered and in good hands on every job.</p>
         </div>
         <div class="why-item">
           <div class="num">★</div>
           <h3>Quality Work</h3>
-          <p>We do it right the first time and stand behind every job.</p>
+          <p>We do it right the first time and stand behind what we do.</p>
         </div>
         <div class="why-item">
           <div class="num">📍</div>
-          <h3>Local &amp; Reliable</h3>
-          <p>Proudly serving Greater LA and the communities around Lancaster.</p>
-        </div>
-        <div class="why-item">
-          <div class="num">A</div>
-          <h3>BBB Rated</h3>
-          <p>An "A" rating from the Better Business Bureau for trustworthy service.</p>
+          <h3>Local and Reliable</h3>
+          <p>We are based in the LA area and we show up when we say we will.</p>
         </div>
       </div>
     </div>
   </section>
 
   <div class="cta-band">
-    <h2>Need a Repair or a Project Quoted?</h2>
-    <p>Free estimates. No pressure. Just honest work.</p>
+    <h2>Need a Repair or a Quote?</h2>
+    <p>Call us today. Estimates are free and there is no pressure.</p>
     <a href="tel:3234220016" class="btn">Call (323) 422-0016</a>
   </div>
 
@@ -308,70 +275,21 @@
         <div class="bar"></div>
       </div>
       <div class="review-grid">
-        <div class="review">
-          <div class="stars">★★★★★</div>
-          <p>"Replace this with a real review from one of your customers. Honest, specific quotes about the work you did build the most trust with new clients."</p>
-          <div class="name">Customer Name</div>
-          <div class="meta">Lancaster, CA</div>
-        </div>
-        <div class="review">
-          <div class="stars">★★★★★</div>
-          <p>"Add a second review here. Mention the type of job — plumbing, a panel upgrade, a remodel — so visitors see the range of what you do."</p>
-          <div class="name">Customer Name</div>
-          <div class="meta">Greater LA</div>
-        </div>
-        <div class="review">
-          <div class="stars">★★★★★</div>
-          <p>"A third review here rounds out the section nicely. Showing up on time, fair pricing, and clean work are the things customers love to hear about."</p>
-          <div class="name">Customer Name</div>
-          <div class="meta">Palmdale, CA</div>
+        <div class="review review-empty">
+          <p>We are just getting started and building up our reviews. Check back soon to see what our customers have to say, or visit our Yelp page below.</p>
         </div>
       </div>
       <div class="yelp-link">
-        <a class="btn" href="https://www.yelp.com/biz/atx-construction-and-maintenance-lake-los-angeles-2" target="_blank" rel="noopener">Read More Reviews on Yelp</a>
+        <a class="btn" href="https://www.yelp.com/biz/atx-construction-and-maintenance-lake-los-angeles-2" target="_blank" rel="noopener">See Us on Yelp</a>
       </div>
     </div>
   </section>
-
-  <section id="contact">
-    <div class="container">
-      <div class="section-title">
-        <h2>Contact Us</h2>
-        <div class="bar"></div>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <h3>Phone</h3>
-          <p><a href="tel:3234220016">(323) 422-0016</a></p>
-          <h3>Email</h3>
-          <p><a href="mailto:atxconstructioninc@gmail.com">atxconstructioninc@gmail.com</a></p>
-          <h3>Service Area</h3>
-          <p>Greater Los Angeles &amp; all communities near Lancaster, CA</p>
-          <h3>Hours</h3>
-          <p>Mon&ndash;Sat: 7am &ndash; 7pm<br>Emergency service available</p>
-        </div>
-        <div class="form">
-          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <input type="text" name="name" placeholder="Your Name" aria-label="Your Name" required>
-            <input type="tel" name="phone" placeholder="Phone Number" aria-label="Phone Number" required>
-            <input type="email" name="email" placeholder="Email Address" aria-label="Email Address" required>
-            <textarea name="message" rows="4" placeholder="How can we help?" aria-label="Message" required></textarea>
-            <button type="submit">Request Estimate</button>
-          </form>
-          <p class="form-note">We'll get back to you as soon as we can. Or call us directly at (323) 422-0016.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="license-strip">
-    Licensed by the California Contractors State License Board · <span>License #1122013</span>
-  </div>
 
   <footer>
-    <div class="logo">ATX <span style="color:var(--orange)">Construction &amp; Maintenance Inc.</span></div>
-    <p>Licensed &amp; Insured · CSLB #1122013 · Greater Los Angeles &amp; Lancaster, CA</p>
-    <p style="margin-top:8px;">&copy; 2026 ATX Construction &amp; Maintenance Inc. · <a href="tel:3234220016">(323) 422-0016</a></p>
+    <div class="logo">ATX <span style="color:var(--gold)">Construction &amp; Maintenance Inc.</span></div>
+    <p>Serving Los Angeles · <a href="tel:3234220016">(323) 422-0016</a></p>
+    <p class="fineprint">Licensed and insured. CSLB License #1122013.</p>
+    <p class="fineprint">&copy; 2026 ATX Construction &amp; Maintenance Inc.</p>
   </footer>
 
 </body>
